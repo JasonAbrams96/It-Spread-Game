@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StartButton.png-703cb0ec5ded8276ea2e6f060d64bcb4.stex"
+path="res://.import/itSpreadsTitleText.png-ed356fd0d2df7225e150fb9254bcfc00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MenuIcons/StartButton.png"
-dest_files=[ "res://.import/StartButton.png-703cb0ec5ded8276ea2e6f060d64bcb4.stex" ]
+source_file="res://Assets/MenuIcons/itSpreadsTitleText.png"
+dest_files=[ "res://.import/itSpreadsTitleText.png-ed356fd0d2df7225e150fb9254bcfc00.stex" ]
 
 [params]
 

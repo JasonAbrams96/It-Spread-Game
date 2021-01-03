@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="It Spread"
-run/main_scene="res://MainMenu.tscn"
+run/main_scene="res://Scences/2D/Menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [gdnative]
