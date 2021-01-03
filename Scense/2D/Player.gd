@@ -17,8 +17,6 @@ func _ready():
 func _physics_process(delta):
 	rotation_direction = 0
 	direction = Vector2()
-	# TODO:
-	#	make body move in the direction of the Raycast
 	#	Im going to be real honest with ya'll, I don't know how I got the rotation to work
 	#	but it does. 
 	if Input.is_action_pressed("ui_up"):

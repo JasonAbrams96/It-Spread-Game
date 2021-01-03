@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scense/3D/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.964706, 0, 0, 1 )
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.0823529, 0.160784, 0.584314, 1 )
+
+[node name="TestWorld3D" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="Objects" type="Spatial" parent="."]
+
+[node name="CSGSphere" type="CSGSphere" parent="Objects"]
+transform = Transform( 0.922679, 0, 0.385568, 0, 1, 0, -0.385568, 0, 0.922679, 21.732, 10.9498, -13.3138 )
+material = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="Objects"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175266, 0, -3.95303 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="CSGBox" type="CSGBox" parent="Objects/StaticBody"]
+material_override = SubResource( 3 )
