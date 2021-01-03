@@ -6,3 +6,8 @@ bin/
 build/
 lib/
 .mono/metadata/*.txt
+
+# Build files
+buildAutomation/bin/*
+buildAutomation/templates/*
+public/*
