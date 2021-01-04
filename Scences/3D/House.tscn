@@ -1,49 +1,32 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Sprites/crosshair.png" type="Texture" id=1]
-[ext_resource path="res://Scences/3D/Player.gd" type="Script" id=2]
+[sub_resource type="CubeMesh" id=1]
 
+[sub_resource type="BoxShape" id=2]
 
-[sub_resource type="CapsuleShape" id=1]
-
-[node name="Player" type="KinematicBody"]
-script = ExtResource( 2 )
-
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-08, -1, 0, 0.1, -1.62921e-07, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="RayCast" type="RayCast" parent="."]
-enabled = true
-cast_to = Vector3( 0, 0, -2000 )
+[node name="House" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.128498 )
-current = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0553, -14.1245, -114.545 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Floor" type="StaticBody" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 1 )
+material/0 = null
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer/Control"]
+[node name="Wall" type="StaticBody" parent="."]
+transform = Transform( 3, 0, 0, 0, 0.25, 0, 0, 0, 3, 0, 0, 0 )
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -16.0
-margin_top = -16.0
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="MeshInstance" type="MeshInstance" parent="Wall"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall"]
+shape = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
