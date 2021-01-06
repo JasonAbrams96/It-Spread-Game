@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/MenuIcons/QuitButton.png" type="Texture" id=1]
 [ext_resource path="res://Assets/MenuIcons/StartButton.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scences/2D/Menus/Start.gd" type="Script" id=4]
 [ext_resource path="res://Assets/MenuIcons/ButterKnife.png" type="Texture" id=5]
 [ext_resource path="res://Assets/MenuIcons/itSpreadsTitleText.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Audio/TitleLoop-Song.wav" type="AudioStream" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "SpreadJelly"
@@ -189,8 +190,8 @@ __meta__ = {
 }
 
 [node name="ButterKnife" type="Sprite" parent="MainMenu/VSplitContainer/CenterContainer/AnimationPlayer"]
-position = Vector2( 903.569, 384.385 )
-rotation = 0.296706
+position = Vector2( 467.028, 286.386 )
+rotation = -0.153589
 scale = Vector2( 0.462216, 0.892972 )
 z_index = 1
 texture = ExtResource( 5 )
@@ -199,8 +200,10 @@ __meta__ = {
 }
 
 [node name="TitleSmear" type="Sprite" parent="MainMenu/VSplitContainer/CenterContainer/AnimationPlayer"]
-position = Vector2( 733.21, 282.415 )
-scale = Vector2( 0.919254, 1.14113 )
+position = Vector2( 585, 274 )
+scale = Vector2( 0.0525789, 1.14113 )
 texture = ExtResource( 6 )
 
 [node name="TitleScreenMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
