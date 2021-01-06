@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scense/3D/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scences/3D/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scences/3D/Items/Spread.tscn" type="PackedScene" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.964706, 0, 0, 1 )
@@ -16,6 +17,12 @@ albedo_color = Color( 0.0823529, 0.160784, 0.584314, 1 )
 
 [node name="Objects" type="Spatial" parent="."]
 
+[node name="Spread" parent="Objects" instance=ExtResource( 2 )]
+transform = Transform( 0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.25, -0.000268936, 2.46065, -3.69998 )
+
+[node name="Spread2" parent="Objects" instance=ExtResource( 2 )]
+transform = Transform( 0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.25, 0.639147, 2.46065, -3.69998 )
+
 [node name="CSGSphere" type="CSGSphere" parent="Objects"]
 transform = Transform( 0.922679, 0, 0.385568, 0, 1, 0, -0.385568, 0, 0.922679, 21.732, 10.9498, -13.3138 )
 material = SubResource( 1 )
@@ -24,7 +31,9 @@ material = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175266, 0, -3.95303 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Objects/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21077, 0 )
 shape = SubResource( 2 )
 
 [node name="CSGBox" type="CSGBox" parent="Objects/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21077, 0 )
 material_override = SubResource( 3 )

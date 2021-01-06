@@ -4,10 +4,11 @@ const MOVE_SPEED = 4
 const MOUSE_SENSITIVITY = 0.32
 
 onready var animation_player = $AnimationPlayer
-onready var raycast = $RayCast
+onready var raycast = $Camera/RayCast
 onready var camera = $Camera
 
 var motion = Vector3()
+var inventory = []
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) #Make mosue invisible and centered on screen
@@ -28,18 +29,21 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * MOUSE_SENSITIVITY))
 		camera.rotate_x(deg2rad(-event.relative.y * MOUSE_SENSITIVITY))
-		raycast.rotate_x((deg2rad(-event.relative.y * MOUSE_SENSITIVITY))) #So the Raycast rotates along with the camera
 		
 		#Clamps the movement of the camera to only be half of the player
 		camera.rotation.x = clamp(camera.rotation.x, deg2rad(-90), deg2rad(90))
-		raycast.rotation.x = clamp(raycast.rotation.x, deg2rad(-90), deg2rad(90))
-		#rotation_degrees.y -= MOUSE_SENSITIVITY * event.relative.x
 		
 	if event is InputEventKey:
 		if Input.is_action_pressed("pickup_or_use"):
-			
+			if raycast.is_colliding():
+				var o = raycast.get_collider()
+				if o.is_in_group("Item"):
+					var name = o.name
+					if o.add_to_inventory_and_kill_this(inventory, name):
+						print(name + " was added to inventory")
+						
 			$AnimationPlayer.play("Grab")
-			pass
+			
 			# Check ray cast to see if there is an item in front of player and pick up item
 			#	TODO, change distance of raycast  to make the item seem in front of player
 			#			use pickup animation
