@@ -15,10 +15,10 @@ on:
 
 jobs:
   Godot:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-bionic
     strategy:
       matrix:
-        platform: [linux, windows]
+        platform: [linux]
     steps:
       - uses: actions/checkout@v2
         with:
