@@ -10,7 +10,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "SpreadJelly"
-length = 2.0
+length = 1.4
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("AnimationPlayer/ButterKnife:position:x")
 tracks/0/interp = 1
@@ -19,7 +19,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "points": PoolRealArray( 467.028, -0.25, 0, 0.25, 0, 903.569, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1.7 )
+"times": PoolRealArray( 0, 1.4 )
 }
 tracks/1/type = "bezier"
 tracks/1/path = NodePath("AnimationPlayer/ButterKnife:position:y")
@@ -29,7 +29,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "points": PoolRealArray( 286.386, -0.25, 0, 0.25, 0, 384.385, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1.7 )
+"times": PoolRealArray( 0, 1.4 )
 }
 tracks/2/type = "bezier"
 tracks/2/path = NodePath("AnimationPlayer/ButterKnife:rotation_degrees")
@@ -39,7 +39,7 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "points": PoolRealArray( -8.8, -0.25, 0, 0.25, 0, 17, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1.7 )
+"times": PoolRealArray( 0, 1.4 )
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("AnimationPlayer/TitleSmear:scale:x")
@@ -49,7 +49,7 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 0.0525789, -0.25, 0, 0.25, 0, 0.919254, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.3, 1.7 )
+"times": PoolRealArray( 0.3, 1.4 )
 }
 tracks/4/type = "bezier"
 tracks/4/path = NodePath("AnimationPlayer/TitleSmear:scale:y")
@@ -59,7 +59,7 @@ tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
 "points": PoolRealArray( 1.14113, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.7 )
+"times": PoolRealArray( 1.4 )
 }
 tracks/5/type = "bezier"
 tracks/5/path = NodePath("AnimationPlayer/TitleSmear:position:x")
@@ -69,7 +69,7 @@ tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
 "points": PoolRealArray( 585, -0.25, 0, 0.25, 0, 733.21, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.3, 1.7 )
+"times": PoolRealArray( 0.3, 1.4 )
 }
 tracks/6/type = "bezier"
 tracks/6/path = NodePath("AnimationPlayer/TitleSmear:position:y")
@@ -79,7 +79,7 @@ tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
 "points": PoolRealArray( 274, -0.25, 0, 0.25, 0, 282.415, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.3, 1.7 )
+"times": PoolRealArray( 0.3, 1.4 )
 }
 
 [node name="Control" type="Control"]
