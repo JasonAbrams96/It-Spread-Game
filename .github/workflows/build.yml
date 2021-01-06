@@ -27,7 +27,7 @@ jobs:
         id: build
         uses: josephbmanley/build-godot-action@v1.4.0
         with:
-          name: example
+          name: testBuild
           preset: ${{ matrix.platform }}
           debugMode: "true"
       - name: Upload Artifact
