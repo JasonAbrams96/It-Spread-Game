@@ -1,7 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.0295041, 0.0821213, 0.0812988 )
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0.435294, 0.360784, 0.223529, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0.435294, 0.360784, 0.223529, 1 )
 
 [node name="Wallet" type="Area"]
 collision_layer = 2
@@ -18,9 +28,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0924561, 1.06996, 0.096017 )
 width = 0.0133239
 height = 0.177
 depth = 0.18063
+material = SubResource( 2 )
 
 [node name="CSGBox2" type="CSGBox" parent="walletShape"]
 transform = Transform( 0.939094, 0, 0.34366, 0, 1, 0, -0.34366, 0, 0.939094, 0.122991, 1.06996, 0.096017 )
 width = 0.0133239
 height = 0.177117
 depth = 0.18063
+material = SubResource( 3 )
