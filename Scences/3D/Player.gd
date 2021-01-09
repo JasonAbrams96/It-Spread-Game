@@ -28,13 +28,17 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * MOUSE_SENSITIVITY))
 		camera.rotate_x(deg2rad(-event.relative.y * MOUSE_SENSITIVITY))
+		raycast.rotate_x((deg2rad(-event.relative.y * MOUSE_SENSITIVITY))) #So the Raycast rotates along with the camera
 		
 		#Clamps the movement of the camera to only be half of the player
 		camera.rotation.x = clamp(camera.rotation.x, deg2rad(-90), deg2rad(90))
+		raycast.rotation.x = clamp(raycast.rotation.x, deg2rad(-90), deg2rad(90))
 		#rotation_degrees.y -= MOUSE_SENSITIVITY * event.relative.x
 		
 	if event is InputEventKey:
 		if Input.is_action_pressed("pickup_or_use"):
+			
+			$AnimationPlayer.play("Grab")
 			pass
 			# Check ray cast to see if there is an item in front of player and pick up item
 			#	TODO, change distance of raycast  to make the item seem in front of player

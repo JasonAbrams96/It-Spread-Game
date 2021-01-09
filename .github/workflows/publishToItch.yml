@@ -3,7 +3,9 @@ name: Itch.io Push
 on:
   release:
     branches: [ main ]
-
+  workflow_dispatch:
+    branches: [ master ]
+      
 jobs:
   build:
     runs-on: ubuntu-latest
