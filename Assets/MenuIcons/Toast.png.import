@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD:Assets/MenuIcons/Toast.png.import
 path="res://.import/Toast.png-eb8ef7239dc73c476a130ca89d337ca7.stex"
+=======
+path="res://.import/QuitButton.png-0f47edc038e7eedb9a6fe7ffd67854b7.stex"
+>>>>>>> Artwork:Assets/MenuIcons/QuitButton.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/MenuIcons/Toast.png.import
 source_file="res://Assets/MenuIcons/Toast.png"
 dest_files=[ "res://.import/Toast.png-eb8ef7239dc73c476a130ca89d337ca7.stex" ]
+=======
+source_file="res://Assets/MenuIcons/QuitButton.png"
+dest_files=[ "res://.import/QuitButton.png-0f47edc038e7eedb9a6fe7ffd67854b7.stex" ]
+>>>>>>> Artwork:Assets/MenuIcons/QuitButton.png.import
 
 [params]
 

@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD:Assets/Sprites/crosshair.png.import
 path="res://.import/crosshair.png-f9e1ed6841917a17a79f96f1872903eb.stex"
+=======
+path="res://.import/StartButton.png-89e2e4383ec2fe60bff099e0d8b6e440.stex"
+>>>>>>> Artwork:Assets/MenuIcons/StartButton.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/Sprites/crosshair.png.import
 source_file="res://Assets/Sprites/crosshair.png"
 dest_files=[ "res://.import/crosshair.png-f9e1ed6841917a17a79f96f1872903eb.stex" ]
+=======
+source_file="res://Assets/MenuIcons/StartButton.png"
+dest_files=[ "res://.import/StartButton.png-89e2e4383ec2fe60bff099e0d8b6e440.stex" ]
+>>>>>>> Artwork:Assets/MenuIcons/StartButton.png.import
 
 [params]
 
