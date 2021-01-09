@@ -9,7 +9,7 @@ albedo_color = Color( 0.937255, 0.847059, 0.247059, 1 )
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.183933, 0.0763582, 0.0123584 )
 
-[node name="Area" type="Area" groups=[
+[node name="HouseKey" type="Area" groups=[
 "Item",
 ]]
 collision_layer = 2
