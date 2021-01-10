@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Sprites/crosshair.png" type="Texture" id=1]
-[ext_resource path="res://Scense/3D/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scences/3D/Player.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/hand_animation_sheet.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
@@ -24,22 +24,27 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4956, 0 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-08, -1, 0, 0.1, -1.62921e-07, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-08, -1, 0, 0.1, -1.62921e-07, 0, 0, 0.22186 )
 shape = SubResource( 1 )
 
-[node name="RayCast" type="RayCast" parent="."]
-enabled = true
-cast_to = Vector3( 0, 0, -2000 )
-
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.128498 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17776, -0.128498 )
 current = true
+
+[node name="RayCast" type="RayCast" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.128498 )
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Grab = SubResource( 2 )

@@ -1,6 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scense/3D/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scences/3D/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scences/3D/Items/Spread.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scences/3D/Items/Wallet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scences/3D/Items/Item.gd" type="Script" id=4]
+[ext_resource path="res://Scences/3D/Items/CarKey.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scences/3D/Items/HouseKey.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scences/3D/Items/Bread.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.964706, 0, 0, 1 )
@@ -16,6 +22,24 @@ albedo_color = Color( 0.0823529, 0.160784, 0.584314, 1 )
 
 [node name="Objects" type="Spatial" parent="."]
 
+[node name="HouseKey" parent="Objects" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.22554, -3.29266 )
+
+[node name="CarKey" parent="Objects" instance=ExtResource( 5 )]
+transform = Transform( 0.596693, 0, -6.4216e-08, 0, -0.122772, 0, 9.00981e-08, 0, 0.425284, -0.206793, 2.32445, -3.4728 )
+
+[node name="Wallet" parent="Objects" groups=[
+"Item",
+] instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421198, 1.22728, -4.15261 )
+script = ExtResource( 4 )
+
+[node name="Spread" parent="Objects" instance=ExtResource( 2 )]
+transform = Transform( 0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.25, -0.000268936, 2.46065, -3.69998 )
+
+[node name="Bread" parent="Objects" instance=ExtResource( 7 )]
+transform = Transform( 0.776208, 0, 0, 0, 0.722077, 0, 0, 0, 0.744716, -0.502599, 2.39884, -4.38515 )
+
 [node name="CSGSphere" type="CSGSphere" parent="Objects"]
 transform = Transform( 0.922679, 0, 0.385568, 0, 1, 0, -0.385568, 0, 0.922679, 21.732, 10.9498, -13.3138 )
 material = SubResource( 1 )
@@ -24,7 +48,9 @@ material = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175266, 0, -3.95303 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Objects/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21077, 0 )
 shape = SubResource( 2 )
 
 [node name="CSGBox" type="CSGBox" parent="Objects/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21077, 0 )
 material_override = SubResource( 3 )

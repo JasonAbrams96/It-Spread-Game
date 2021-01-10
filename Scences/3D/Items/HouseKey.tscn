@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scences/3D/Items/Item.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+albedo_color = Color( 0.937255, 0.847059, 0.247059, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.183933, 0.0763582, 0.0123584 )
+
+[node name="HouseKey" type="Area" groups=[
+"Item",
+]]
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+transform = Transform( 0.179966, 0, 0, 0, 0.275279, 0, 0, 0, 0.0281666, 0, 0, 0.0133705 )
+polygon = PoolVector2Array( 0.156493, -0.0897765, 0.550067, -0.0657082, 0.616152, 0.0240868, 0.779242, 0.0231648, 1.12144, 0.0148708, 1.27439, -0.195834, 1.34159, -0.046951, 1.46161, -0.228083, 1.62766, -0.0794134, 1.89536, -0.169563, 1.90545, -0.0713945, 2.16599, -0.0517646, 2.23647, 0.0397558, 2.12034, 0.135864, 0.733236, 0.156237, 0.542882, 0.400151, 0.10201, 0.384012 )
+material = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211431, 0.0266496, 0 )
+shape = SubResource( 2 )
