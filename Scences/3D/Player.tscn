@@ -34,11 +34,11 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, -1.62921e-08, -1, 0, 0.1, -1.62921e-07, 0, 0, 0.22186 )
 shape = SubResource( 1 )
 
-[node name="Camera" type="Camera" parent="."]
+[node name="Player_Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17776, -0.128498 )
 current = true
 
-[node name="RayCast" type="RayCast" parent="Camera"]
+[node name="RayCast" type="RayCast" parent="Player_Camera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.128498 )
 enabled = true
 cast_to = Vector3( 0, 0, -2 )

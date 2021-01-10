@@ -59,6 +59,8 @@ func move():
 	elif Input.is_action_pressed("ui_left"):
 		motion.x -= 1
 		
+	
+	
 func _physics_process(delta):
 	motion = Vector3()
 	
