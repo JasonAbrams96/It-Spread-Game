@@ -65,6 +65,17 @@ position = Vector2( 224, -256 )
 texture = ExtResource( 3 )
 hframes = 4
 
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+margin_left = -441.619
+margin_top = -536.746
+margin_right = -285.619
+margin_bottom = -386.746
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_top = 0.5

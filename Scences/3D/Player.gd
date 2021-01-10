@@ -26,6 +26,7 @@ func kill():
 	get_tree().reload_current_scene()
 	
 func _input(event):
+	
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * MOUSE_SENSITIVITY))
 		camera.rotate_x(deg2rad(-event.relative.y * MOUSE_SENSITIVITY))
@@ -34,6 +35,7 @@ func _input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg2rad(-90), deg2rad(90))
 		
 	if event is InputEventKey:
+		
 		if Input.is_action_pressed("pickup_or_use"):
 			if raycast.is_colliding():
 				var o = raycast.get_collider()
@@ -44,9 +46,16 @@ func _input(event):
 						
 			$AnimationPlayer.play("Grab")
 			
-			# Check ray cast to see if there is an item in front of player and pick up item
-			#	TODO, change distance of raycast  to make the item seem in front of player
-			#			use pickup animation
+		#This checks what the items are in inventory
+		if Input.is_key_pressed(KEY_Z):
+			
+			var builder = ""
+			
+			for i in inventory:
+				builder =  builder + i + "\n"
+				
+			$CanvasLayer/Control/Label.text = builder
+			
 		
 func move():
 	if Input.is_action_pressed("ui_up"):
